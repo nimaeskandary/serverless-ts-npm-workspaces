@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "knative-playground",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "any": "echo running..."
   },
   "author": "Nima Eskandary <nimaesk1@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
     "jest": "^27.5.1",
     "serverless": "^3.2.0",
     "serverless-knative": "^0.5.0",

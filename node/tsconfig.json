@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "incremental": true,
+        "target": "ES6",
+        "module": "commonjs",
+        "declarationMap": true,
+        "sourceMap": true,
+        "composite": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": "."
+    }
+}
