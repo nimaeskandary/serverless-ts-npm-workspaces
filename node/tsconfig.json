@@ -9,6 +9,9 @@
         "strict": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "baseUrl": "."
+        "baseUrl": ".",
+        "paths": { // https://www.typescriptlang.org/tsconfig#paths
+            "handlers/*": ["packages/handlers/src/*"]
+        }
     }
 }
