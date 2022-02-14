@@ -3,6 +3,7 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   moduleNameMapper: { // https://kulshekhar.github.io/ts-jest/docs/getting-started/paths-mapping
-    '^handlers/(.*)$': '<rootDir>/packages/handlers/src/$1',
+    '^@/handlers/(.*)$': '<rootDir>/packages/handlers/src/$1',
+    '^@/logger/(.*)$': '<rootDir>/packages/logger/src/$1'
   }
 }

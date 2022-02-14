@@ -2,7 +2,7 @@
   "name": "handlers",
   "version": "1.0.0",
   "description": "handlers",
-  "main": "build/index.js",
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
   },

@@ -11,8 +11,13 @@
         "forceConsistentCasingInFileNames": true,
         "baseUrl": ".",
         "paths": { // https://www.typescriptlang.org/tsconfig#paths
-            "handlers/*": ["packages/handlers/src/*"]
+            "@/handlers/*": ["packages/handlers/src/*"],
+            "@/logger/*": ["packages/logger/src/*"],
         },
         "outDir": "build"
-    }
+    },
+    "include": [
+        "packages/*/src/**/*.ts",
+        "packages/*/tests/**/*.ts"
+    ]
 }

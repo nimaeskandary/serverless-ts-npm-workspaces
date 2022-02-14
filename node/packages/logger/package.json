@@ -1,0 +1,15 @@
+{
+    "name": "logger",
+    "version": "1.0.0",
+    "description": "logger",
+    "devDependencies": {
+        "@types/winston": "^2.4.4"
+    },
+    "scripts": {},
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "uninstall": "^0.0.0",
+        "winston": "^3.6.0"
+    }
+}
