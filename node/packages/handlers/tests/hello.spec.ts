@@ -1,4 +1,4 @@
-import { handler } from 'handlers/hello'
+import { handler } from 'handlers/src/hello'
 
 describe('hello', () => {
     it('returns 200', () => {

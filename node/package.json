@@ -4,7 +4,7 @@
   "description": "knative-playground",
   "scripts": {
     "test": "jest",
-    "any": "echo running..."
+    "build": "tsc -p tsconfig.build.json"
   },
   "author": "Nima Eskandary <nimaesk1@gmail.com>",
   "license": "MIT",

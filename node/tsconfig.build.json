@@ -1,0 +1,5 @@
+// to not include tests when building
+{
+    "extends": "./tsconfig.json",
+    "exclude": ["**/*.test.*", "**/__mocks__/*", "**/__tests__/*"]
+}

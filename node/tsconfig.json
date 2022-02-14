@@ -12,6 +12,7 @@
         "baseUrl": ".",
         "paths": { // https://www.typescriptlang.org/tsconfig#paths
             "handlers/*": ["packages/handlers/src/*"]
-        }
+        },
+        "outDir": "build"
     }
 }

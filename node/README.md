@@ -17,3 +17,7 @@ There is one root jest config responsible for running all tests.
 
 * run tests: `npm run test`
 * run a subset of tests: `npm run test -- --testPathPattern packages/handlers/`
+
+## Build
+
+To compile all packages into `build/`, run `npm run build`
