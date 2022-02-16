@@ -4,6 +4,7 @@
         "target": "ES6",
         "module": "commonjs",
         "declarationMap": true,
+        "declaration": true,
         "sourceMap": true,
         "composite": true,
         "strict": true,
@@ -13,11 +14,6 @@
         "paths": { // https://www.typescriptlang.org/tsconfig#paths
             "@/handlers/*": ["packages/handlers/src/*"],
             "@/logger/*": ["packages/logger/src/*"],
-        },
-        "outDir": "build"
-    },
-    "include": [
-        "packages/*/src/**/*.ts",
-        "packages/*/tests/**/*.ts"
-    ]
+        }
+    }
 }

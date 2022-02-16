@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "knative-playground",
   "scripts": {
-    "test": "jest",
-    "build": "tsc -p tsconfig.build.json"
+    "test": "jest"
   },
   "author": "Nima Eskandary <nimaesk1@gmail.com>",
   "license": "MIT",

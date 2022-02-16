@@ -2,10 +2,11 @@
   "name": "handlers",
   "version": "1.0.0",
   "description": "handlers",
+  "scripts": {
+    "build": "tsc -b src/"
+  },
   "dependencies": {},
   "devDependencies": {},
-  "scripts": {
-  },
   "author": "",
   "license": "ISC"
 }

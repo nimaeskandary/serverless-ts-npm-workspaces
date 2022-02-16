@@ -20,4 +20,4 @@ There is one root jest config responsible for running all tests.
 
 ## Build
 
-To compile all packages into `build/`, run `npm run build`
+To compile, run `npm run build -ws --if-present`
