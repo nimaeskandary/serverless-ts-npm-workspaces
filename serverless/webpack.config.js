@@ -3,9 +3,10 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const slsw = require('serverless-webpack');
 
 module.exports = {
-  "mode": "development",
+  "mode": "production",
   "target": "node12",
   "entry": slsw.lib.entries,
+  "devtool": 'inline-source-map',
   "output": {
       "path": path.resolve(__dirname, 'build'),
       "filename": "[name].js",
