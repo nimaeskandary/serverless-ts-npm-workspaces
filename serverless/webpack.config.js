@@ -33,12 +33,6 @@ module.exports = {
       ]
   },
   resolve: {
-    modules: [
-      path.resolve(__dirname, '../node/packages/handlers/node_modules'),
-      path.resolve(__dirname, '../node/packages/handlers/'),
-      path.resolve(__dirname, '../node/node_modules'),
-      path.resolve(__dirname, '../node')
-    ],
     extensions: [".ts", ".js"],
     plugins: [
       new TsconfigPathsPlugin({

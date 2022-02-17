@@ -12,10 +12,12 @@ provider:
   memorySize: 128
   timeout: 30
   
+# package:
+#   individually: true
 
 functions:
-  createGreeting:
-    handler: ../node/packages/handlers/src/Hello.handler
+  hello:
+    handler: ../node/packages/handlers/src/aws/AwsHello.awsHelloHandler
     events:
       - http:
           path: /
