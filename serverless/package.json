@@ -1,9 +1,10 @@
 {
-    "name": "knative-playground-serverless",
+    "name": "serverless-ts-npm-workspaces-serverless",
     "version": "1.0.0",
-    "description": "knative-playground",
+    "description": "serverless-ts-npm-workspaces",
     "scripts": {
-        "local": "sls offline"
+        "local": "sls offline",
+        "build": "sls package"
     },
     "author": "Nima Eskandary <nimaesk1@gmail.com>",
     "license": "MIT",

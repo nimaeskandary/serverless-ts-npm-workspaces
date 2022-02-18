@@ -12,8 +12,8 @@ provider:
   memorySize: 128
   timeout: 30
   
-# package:
-#   individually: true
+package:
+  individually: true
 
 functions:
   hello:
@@ -27,3 +27,5 @@ custom:
   webpack:
     includeModules:
       packagePath: '../node/packages/handlers/package.json'
+      forceExclude:
+        - aws-sdk

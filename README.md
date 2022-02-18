@@ -1,4 +1,4 @@
-# knative-playground
+# serverless-ts-npm-workspaces
 
 ## Table of Contents
 

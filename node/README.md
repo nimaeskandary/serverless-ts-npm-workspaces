@@ -2,22 +2,30 @@
 
 Typescript packages
 
+## Dependencies
+
+* Ensure you have node 12+
+* run `npm install`
+
 ## Workspaces
 
-This project makes use of [NPM Workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces)
+This project makes use of [NPM Workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces), this allows to break up our code into lighterweight packages. Each package tracks its own prod depedencies in a `package.json`, but when installed, common dependenices are hoisted into the `node_modules` in the project root instead of downloaded multiple times
 
-* There is a root `package.json` and `node_modules`
-* Directories in `packages/*` are sub node packages and can have their own dependencies / `node_modules`, but they can also make use of hoisted directories in the project root, as well as other sibling packages
-    * e.g. many dev dependencies are installed via the root `package.json` and shared between sub packages
-* Typescript is configured with path mapping, so sub package `a` can import from `b` like so, `import { BFooClass } from 'b/BFooClass'`
+## Typescript
+
+* [path mappings](https://www.typescriptlang.org/tsconfig#paths) are defined in `tsconfig-base.json`, this allows us to avoid imports that rely on relative paths, e.g. `import { foo } from '../../foo` vs `import { foo } from '@/foo`
+* `src` and `tests` directories in our packages all have their own `tsconfig.json` that extends the `tsconfig-base.json` in the project root
+* this project utilizes [project references](https://www.typescriptlang.org/docs/handbook/project-references.html)
+    * allows to import code between packages without having to include them in eachothers `package.json`
+    * we can use the `tsc --build` flag allowing for incremental compilation of packages
 
 ## Tests
 
-There is one root jest config responsible for running all tests.
+There is one root jest config responsible for running all tests
 
 * run tests: `npm run test`
-* run a subset of tests: `npm run test -- --testPathPattern packages/handlers/`
+* run a subset of tests: `npm run test -- --testPathPattern packages/<package-name>`
 
 ## Build
 
-To compile, run `npm run build -ws --if-present`
+run `npm run build`

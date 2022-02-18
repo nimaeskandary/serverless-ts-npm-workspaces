@@ -5,8 +5,9 @@
   "scripts": {
     "build": "tsc -b src/"
   },
-  "dependencies": {},
-  "devDependencies": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.92"
+  }
 }

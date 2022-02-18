@@ -1,10 +1,10 @@
 {
-  "name": "knative-playground-node",
+  "name": "serverless-ts-npm-workspaces-node",
   "version": "1.0.0",
-  "description": "knative-playground",
+  "description": "serverless-ts-npm-workspaces",
   "scripts": {
     "test": "jest",
-    "build": "webpack src/"
+    "build": "cd packages/handlers && npm run build"
   },
   "author": "Nima Eskandary <nimaesk1@gmail.com>",
   "license": "MIT",
