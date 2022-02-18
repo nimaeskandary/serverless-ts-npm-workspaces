@@ -4,7 +4,6 @@
   "description": "serverless-ts-npm-workspaces",
   "scripts": {
     "test": "jest",
-    "build": "cd packages/handlers && npm run build",
     "local": "sls offline",
     "package": "sls package"
   },

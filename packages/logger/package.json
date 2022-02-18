@@ -2,7 +2,9 @@
     "name": "logger",
     "version": "1.0.0",
     "description": "logger",
-    "scripts": {},
+    "scripts": {
+        "build": "tsc --build src/"
+    },
     "devDependencies": {
         "@types/winston": "^2.4.4"
     },

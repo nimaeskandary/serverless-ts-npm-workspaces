@@ -2,11 +2,12 @@
   "name": "handlers",
   "version": "1.0.0",
   "description": "handlers",
-  "scripts": {
-    "build": "tsc -b src/"
-  },
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "build": "tsc --build src/"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92"
   }

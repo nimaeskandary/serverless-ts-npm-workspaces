@@ -12,8 +12,8 @@ provider:
   memorySize: 128
   timeout: 30
   
-#package:
-  #individually: true
+package:
+  individually: true
 
 functions:
   hello:
@@ -22,10 +22,3 @@ functions:
       - http:
           path: /
           method: get
-
-custom:
-  webpack:
-    includeModules:
-      nodeModulesRelativeDir: ./
-      forceExclude:
-        - aws-sdk
