@@ -12,12 +12,12 @@ provider:
   memorySize: 128
   timeout: 30
   
-package:
-  individually: true
+#package:
+  #individually: true
 
 functions:
   hello:
-    handler: ../node/packages/handlers/src/aws/AwsHello.awsHelloHandler
+    handler: packages/handlers/src/aws/AwsHello.awsHelloHandler
     events:
       - http:
           path: /
@@ -26,6 +26,6 @@ functions:
 custom:
   webpack:
     includeModules:
-      packagePath: '../node/packages/handlers/package.json'
+      nodeModulesRelativeDir: ./
       forceExclude:
         - aws-sdk

@@ -1,5 +1,0 @@
-# serverless
-
-## Running locally
-
-
