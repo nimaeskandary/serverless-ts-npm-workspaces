@@ -1,5 +1,7 @@
 # serverless-ts-npm-workspaces
 
+Work in progress serverless typescript project
+
 ## Table of Contents
 
 * [Dependencies](#dependencies)
