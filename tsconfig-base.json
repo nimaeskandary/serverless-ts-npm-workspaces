@@ -12,7 +12,7 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "baseUrl": ".",
-        "paths": { // https://www.typescriptlang.org/tsconfig#paths
+        "paths": {
             "@/handlers/*": ["packages/handlers/src/*"],
             "@/logger/*": ["packages/logger/src/*"],
             "@/error/*": ["packages/error/src/*"],

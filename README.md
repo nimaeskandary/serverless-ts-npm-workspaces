@@ -36,7 +36,7 @@
 
 ### Adding a new package
 
-To see the configuration required to add a new package, see [Package Configuration](./docs/Package_Configration.md)
+run `npm run create-package <package-name>` to create and configure a new package, see [Package Configuration](./docs/Package_Configration.md) for details on configuration
 
 ## Tests
 

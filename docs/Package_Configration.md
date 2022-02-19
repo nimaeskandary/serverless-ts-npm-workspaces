@@ -13,15 +13,16 @@ Some configration is used to make use of npm workspaces, typescript composite pr
 * [Jest](#jest)
 * [Webpack](#webpack)
 
-## Steps to add a new package
-
 ## Creation
 
-`npm init -w ./packages/<package-name>`
+run `npm run create-package <package-name>` to setup a new package
 
-This will create the inital directory and add an entry to the `workspaces` entry in the root `package.json`
+* creates file structure
+* creates/updates package.json files
+* creates/updates tsconfigs
+* updates jest config
 
-### File Structure
+## File Structure
 
 ```
 ├── packages
@@ -33,9 +34,9 @@ This will create the inital directory and add an entry to the `workspaces` entry
 │   │   |   ├── tsconfig.json
 ```
 
-### Ts Config
+## Ts Config
 
-#### project root
+### project root
 
 `tsconfig-base.json`
 
@@ -49,7 +50,7 @@ This will create the inital directory and add an entry to the `workspaces` entry
         }
 ```
 
-#### src
+### src
 
 `packages/<package-name>/src/tsconfig.json`
 
@@ -68,7 +69,7 @@ This will create the inital directory and add an entry to the `workspaces` entry
 }
 ```
 
-#### tests 
+### tests 
 
 `packages/<package-name>/tests/tsconfig.json`
 
@@ -77,14 +78,13 @@ This will create the inital directory and add an entry to the `workspaces` entry
     "extends": "../../../tsconfig-base.json",
     "references": [
         {
-            "path": "../../logger/src"
-        },
-        ...other internal dependencies
+            "path": "../src" // this should handle other references for tests
+        }
     ]
 }
 ```
 
-### Jest
+## Jest
 
 ```
 module.exports = {
@@ -95,7 +95,7 @@ module.exports = {
     }
 ```
 
-### Webpack
+## Webpack
 
 * currently `webpack.config.js` is used when running serverless to build the handlers and bundle dependencies
     * this sorts out the dependency mess of using npm workspaces, typescript references, typescript path mapping
