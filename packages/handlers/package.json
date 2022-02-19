@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "handlers",
   "scripts": {
-    "build-ts": "tsc --build src/"
+    "build": "tsc --build src/"
   },
   "dependencies": {},
   "devDependencies": {

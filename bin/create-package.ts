@@ -17,7 +17,7 @@ const createPackageJson = async (packageName: string) => {
     "version": "1.0.0",
     "description": "${packageName}",
     "scripts": {
-        "build-ts": "tsc --build src/"
+        "build": "tsc --build src/"
     },
     "dependencies": {},
     "devDependencies": {},
