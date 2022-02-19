@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "local": "sls offline",
-    "package": "sls package"
+    "package": "sls package",
+    "build": "build -ws"
   },
   "author": "Nima Eskandary <nimaesk1@gmail.com>",
   "license": "MIT",
@@ -23,6 +24,7 @@
   },
   "workspaces": [
     "packages/handlers",
-    "packages/logger"
+    "packages/logger",
+    "packages/error"
   ]
 }
