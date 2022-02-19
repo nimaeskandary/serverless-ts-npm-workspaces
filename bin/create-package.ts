@@ -6,7 +6,7 @@ import { promises } from 'fs'
 import { join } from 'path'
 
 const execP = promisify(exec)
-const rootDir = join(__dirname, '../') 
+const rootDir = join(__dirname, '../')
 
 const createPackageJson = async (packageName: string) => {
     const path = join(rootDir, 'packages', packageName, 'package.json')
@@ -71,8 +71,8 @@ const updateJestConfig = async (packageName: string) => {
 
     const jestConfig = await promises.readFile(path).then(b => JSON.parse(b.toString()))
 
-    const key = `^@/${packageName}/(.*)$`
-    const value =  `<rootDir>/packages/${packageName}/src/$1`
+    const key = `^@serverless-ts-npm-workspaces/${packageName}/(.*)$`
+    const value = `<rootDir>/packages/${packageName}/src/$1`
 
     const moduleNameMapper = jestConfig.moduleNameMapper || {}
     moduleNameMapper[key] = value
@@ -87,8 +87,8 @@ const updateTsConfigBase = async (packageName: string) => {
 
     const tsConfigBase = await promises.readFile(path).then(b => JSON.parse(b.toString()))
 
-    const key = `@/${packageName}/*`
-    const value =  [`packages/${packageName}/src/*`]
+    const key = `@serverless-ts-npm-workspaces/${packageName}/*`
+    const value = [`packages/${packageName}/src/*`]
 
     const paths = tsConfigBase.compilerOptions.paths || {}
     paths[key] = value
@@ -103,7 +103,7 @@ const updateRootPackageJson = async (packageName: string) => {
 
     const packageJson = await promises.readFile(path).then(b => JSON.parse(b.toString()))
 
-    const value =  `packages/${packageName}`
+    const value = `packages/${packageName}`
 
     const workspaces = packageJson.workspaces || []
     workspaces.push(value)
@@ -121,7 +121,7 @@ const main = async () => {
         console.error("error: missing package name")
         process.exit(1)
     }
-    
+
     const packageName = process.argv[2]
     await init(packageName)
     await createPackageJson(packageName)

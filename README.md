@@ -34,7 +34,7 @@ Work in progress serverless typescript project
 * [composite](https://www.typescriptlang.org/tsconfig#composite) project
     * packages are independently compiled, which greatly speeds up build time
 * [path mappings](https://www.typescriptlang.org/tsconfig#paths) are defined in `tsconfig-base.json`
-    * avoids imports that rely on relative paths, e.g. `import { foo } from '../../foo'` vs `import { foo } from '@/foo'`
+    * avoids imports that rely on relative paths, e.g. `import { foo } from '../../foo'` vs `import { foo } from '@serverless-ts-npm-workspaces/foo'`
 
 ### Adding a new package
 

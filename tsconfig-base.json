@@ -13,10 +13,18 @@
         "forceConsistentCasingInFileNames": true,
         "baseUrl": ".",
         "paths": {
-            "@/handlers/*": ["packages/handlers/src/*"],
-            "@/logger/*": ["packages/logger/src/*"],
-            "@/error/*": ["packages/error/src/*"],
-            "@/handler-converters/*": ["packages/handler-converters/src/*"]
+            "@serverless-ts-npm-workspaces/handlers/*": [
+                "packages/handlers/src/*"
+            ],
+            "@serverless-ts-npm-workspaces/logger/*": [
+                "packages/logger/src/*"
+            ],
+            "@serverless-ts-npm-workspaces/error/*": [
+                "packages/error/src/*"
+            ],
+            "@serverless-ts-npm-workspaces/handler-converters/*": [
+                "packages/handler-converters/src/*"
+            ]
         }
     }
 }

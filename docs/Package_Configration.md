@@ -46,7 +46,7 @@ run `npm run create-package <package-name>` to setup a new package
     "compilerOptions": {
         "paths": {
             ... other interal dependencies,
-            "@/<package-name>/*": ["packages/<package-name>/src/*"]
+            "@serverless-ts-npm-workspaces/<package-name>/*": ["packages/<package-name>/src/*"]
         }
 ```
 
@@ -91,7 +91,7 @@ module.exports = {
     ...,
     moduleNameMapper: {
         other internal dependencies,
-        '^@/<package-name>/(.*)$': '<rootDir>/packages/<package-name>/src/$1'
+        '^@serverless-ts-npm-workspaces/<package-name>/(.*)$': '<rootDir>/packages/<package-name>/src/$1'
     }
 ```
 

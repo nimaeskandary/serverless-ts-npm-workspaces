@@ -1,16 +1,15 @@
 {
   "globals": {
-    "ts-jest":
-      {
-        "tsconfig": "tsconfig-base.json"
-      }
+    "ts-jest": {
+      "tsconfig": "tsconfig-base.json"
+    }
   },
   "preset": "ts-jest",
   "testEnvironment": "node",
   "moduleNameMapper": {
-    "^@/handlers/(.*)$": "<rootDir>/packages/handlers/src/$1",
-    "^@/logger/(.*)$": "<rootDir>/packages/logger/src/$1",
-    "^@/error/(.*)$": "<rootDir>/packages/error/src/$1",
-    "^@/handler-converters/(.*)$": "<rootDir>/packages/handler-converters/src/$1"
+    "^@serverless-ts-npm-workspaces/handlers/(.*)$": "<rootDir>/packages/handlers/src/$1",
+    "^@serverless-ts-npm-workspaces/logger/(.*)$": "<rootDir>/packages/logger/src/$1",
+    "^@serverless-ts-npm-workspaces/error/(.*)$": "<rootDir>/packages/error/src/$1",
+    "^@serverless-ts-npm-workspaces/handler-converters/(.*)$": "<rootDir>/packages/handler-converters/src/$1"
   }
 }

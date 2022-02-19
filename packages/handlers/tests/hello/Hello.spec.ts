@@ -1,7 +1,7 @@
-import { helloHandler } from '@/handlers/hello/Hello'
+import { helloHandler } from '@serverless-ts-npm-workspaces/handlers/hello/Hello'
 
 describe('hello', () => {
     it('returns 200', async () => {
-        await expect(helloHandler({headers: {}}, {})).resolves.toEqual({statusCode: 200})
+        await expect(helloHandler({ headers: {} }, {})).resolves.toEqual({ statusCode: 200 })
     })
 })
