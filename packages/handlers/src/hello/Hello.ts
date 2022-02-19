@@ -3,8 +3,6 @@ import { BaseHandlerContext, BaseHandlerEvent, BaseHandlerResult } from '@/handl
 
 const logger = new Logger('hello')
 
-export const hello = async (name: string): Promise<string> => `hello ${name}`
-
 export const helloHandler = async (event: BaseHandlerEvent, context: BaseHandlerContext): Promise<BaseHandlerResult> => {
     logger.info("helloHandler")
     
