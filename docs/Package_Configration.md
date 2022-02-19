@@ -98,5 +98,5 @@ module.exports = {
 ### Webpack
 
 * currently `webpack.config.js` is used when running serverless to build the handlers and bundle dependencies
-    * this sorts out the dependency mess of using npm workspaces and typescript references and typescript path mapping
+    * this sorts out the dependency mess of using npm workspaces, typescript references, typescript path mapping
 * **TODO** similar webpack configurations can be created to build packages that need to published to an npm registry

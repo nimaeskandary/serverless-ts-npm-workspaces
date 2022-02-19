@@ -1,5 +1,5 @@
 import { APIGatewayProxyEventV2, APIGatewayProxyResultV2, Context } from 'aws-lambda'
-import { BaseHandlerContext, BaseHandlerEvent, BaseHandlerResult } from '@/handlers/types'
+import { BaseHandlerEvent, BaseHandlerContext, BaseHandlerResult } from '@/handler-converters/BaseHandler'
 
 export const awsToBaseEvent = (event: APIGatewayProxyEventV2): BaseHandlerEvent => {
     return {

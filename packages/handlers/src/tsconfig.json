@@ -5,7 +5,10 @@
     },
     "references": [
         {
-            "path": "../../logger/src"
+            "path": "../../logger/src" 
+        },
+        {
+            "path": "../../handler-converters/src"
         }
     ]
 }

@@ -3,32 +3,40 @@
 ## Table of Contents
 
 * [Dependencies](#dependencies)
-* [Workspaces](#workspaces)
-* [Typeescript](#typescript)
+* [Packages](#packages)
+    * [Workspaces](#workspaces)
+    * [Typescript](#typescript)
+    * [Adding a new package](#adding-a-new-package)
 * [Tests](#tests)
     * [Unit](#unit)
 * [Build](#build)
-* [Adding a new package](#adding-a-new-package)
+* [Serverless](#serverless)
 
 ## Dependencies
 
-* Ensure you have node 12+
+* node 14
 * run `npm install`
 
-## Workspaces
+## Packages
 
-* directories in `packages/` are [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) 
-    * related projects can share the same development environemt 
-    * flexibility to publish packages to an npm registry, some webpack will need to be involved in the build process to sort dependencies
+### Workspaces
+
+* `packages/` contains [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) 
+    * related projects can share the same development environmet 
+    * managed by a top level `package.json`
+    * flexibility to publish packages to an npm registry
     * common dependenices are hoisted into the `node_modules/` in the project root instead of downloaded multiple times
 
-## Typescript
+### Typescript
 
 * [composite](https://www.typescriptlang.org/tsconfig#composite) project
-    * packages are independently compiled, which greatly speeds up development time
-    * utilizes [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) when importing code between packages
+    * packages are independently compiled, which greatly speeds up build time
 * [path mappings](https://www.typescriptlang.org/tsconfig#paths) are defined in `tsconfig-base.json`
     * avoids imports that rely on relative paths, e.g. `import { foo } from '../../foo` vs `import { foo } from '@/foo`
+
+### Adding a new package
+
+To see the configuration required to add a new package, see [Package Configuration](./docs/Package_Configration.md)
 
 ## Tests
 
@@ -41,6 +49,8 @@
 
 `npm run build`
 
-## Adding a new package
+## Serverless
 
-To see the configuration required to add a new package, see [Package Configuration](./docs/Package_Configration.md)
+### Running locally
+
+`npm run local` will utilize [serverless-offline](https://www.npmjs.com/package/serverless-offline) to spin up serverless functions on `localhost`

@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "logger",
     "scripts": {
-        "build": "tsc --build src/"
+        "build-ts": "tsc --build src/"
     },
     "devDependencies": {
         "@types/winston": "^2.4.4"
@@ -11,6 +11,14 @@
     "dependencies": {
         "winston": "^3.6.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nimaeskandary/serverless-ts-npm-workspaces.git"
+    },
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "bugs": {
+    "url": "https://github.com/nimaeskandary/serverless-ts-npm-workspaces/issues"
+    },
+    "homepage": "https://github.com/nimaeskandary/serverless-ts-npm-workspaces#readme"
 }

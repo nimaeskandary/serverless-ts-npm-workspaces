@@ -15,7 +15,8 @@
         "paths": { // https://www.typescriptlang.org/tsconfig#paths
             "@/handlers/*": ["packages/handlers/src/*"],
             "@/logger/*": ["packages/logger/src/*"],
-            "@/error/*": ["packages/error/src/*"]
+            "@/error/*": ["packages/error/src/*"],
+            "@/handler-converters/*": ["packages/handler-converters/src/*"]
         }
     }
 }

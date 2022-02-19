@@ -1,13 +1,11 @@
 {
-  "name": "handlers",
+  "name": "handler-converters",
   "version": "1.0.0",
-  "description": "handlers",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
   "scripts": {
     "build-ts": "tsc --build src/"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/aws-lambda": "^8.10.92"
   },
   "repository": {
     "type": "git",
