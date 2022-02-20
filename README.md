@@ -17,6 +17,7 @@ Work in progress serverless typescript project
 ## Dependencies
 
 * node 14
+* npm 7+
 * run `npm install`
 
 ## Packages
@@ -49,7 +50,7 @@ run `npm run create-package <package-name>` to create and configure a new packag
 
 ## Build
 
-`npm run build`
+`npm run -ws build`
 
 ## Serverless
 
