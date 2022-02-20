@@ -6,6 +6,7 @@ Some configration is used to make use of npm workspaces, typescript composite pr
 
 * [Creation](#creation)
 * [File Structure](#file-structure)
+* [Package.json](#packagejson)
 * [Ts Config](#ts-config)
     * [project root](#project-root)
     * [src](#src)
@@ -32,6 +33,40 @@ run `npm run create-package <package-name>` to setup a new package
 │   │   |   ├── tsconfig.json
 │   │   ├── tests
 │   │   |   ├── tsconfig.json
+```
+
+## Package.json
+
+### project root
+
+`package.json`
+
+```
+{
+    ...
+    "workspaces": [
+        ... other workspaces
+        "packages/<package-name>"
+    ]
+}
+```
+
+### package root
+
+`packages/<package-name>/package.json`
+
+```
+{
+  "name": "@serverless-ts-npm-workspaces/<package-name>",
+  "scripts": {
+    "build": "tsc --build src/"
+  },
+  "dependencies": {
+      "@serverless-ts-npm-workspaces/logger": "file:../logger" // TODO, typescript doesnt need this to compile since we use project references, and serverless-webpack doesn't need this since it bundles dependencies. TBD if internal dependencies need to be listed here at all once individual package publishing is sorted out
+      ... other internal dependencies
+  },
+  ...
+}
 ```
 
 ## Ts Config
