@@ -1,5 +1,5 @@
 {
-    "name": "logger",
+    "name": "@serverless-ts-npm-workspaces/logger",
     "version": "1.0.0",
     "description": "logger",
     "scripts": {

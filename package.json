@@ -1,5 +1,5 @@
 {
-  "name": "serverless-ts-npm-workspaces",
+  "name": "@serverless-ts-npm-workspaces/root",
   "version": "1.0.0",
   "description": "serverless-ts-npm-workspaces",
   "engines": {
@@ -13,6 +13,9 @@
   },
   "author": "Nima Eskandary <nimaesk1@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "node-forge": ">=1.0.0"
+  },
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.18",

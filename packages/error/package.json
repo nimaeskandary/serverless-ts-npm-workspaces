@@ -1,5 +1,5 @@
 {
-  "name": "error",
+  "name": "@serverless-ts-npm-workspaces/error",
   "version": "1.0.0",
   "description": "error",
   "scripts": {

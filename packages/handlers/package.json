@@ -1,5 +1,5 @@
 {
-  "name": "handlers",
+  "name": "@serverless-ts-npm-workspaces/handlers",
   "version": "1.0.0",
   "description": "handlers",
   "scripts": {
@@ -7,7 +7,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.92"
+    "@types/aws-lambda": "^8.10.92",
+    "@serverless-ts-npm-workspaces/logger": "file:../logger",
+    "@serverless-ts-npm-workspaces/handler-converters": "file:../handler-converters"
   },
   "repository": {
     "type": "git",

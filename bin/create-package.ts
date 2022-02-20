@@ -13,7 +13,7 @@ const createPackageJson = async (packageName: string) => {
     console.log(`creating ${path}...`)
 
     const packageJson = `{
-    "name": "${packageName}",
+    "name": "@serverless-ts-npm-workspaces/${packageName}",
     "version": "1.0.0",
     "description": "${packageName}",
     "scripts": {
