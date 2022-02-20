@@ -17,6 +17,7 @@ Work in progress serverless typescript project
 ## Dependencies
 
 * node 14
+* npm 7+
 * run `npm install`
 
 ## Packages
