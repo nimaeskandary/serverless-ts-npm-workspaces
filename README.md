@@ -49,7 +49,7 @@ run `npm run create-package <package-name>` to create and configure a new packag
 
 ## Build
 
-`npm run build`
+`npm run build -ws`
 
 ## Serverless
 

@@ -9,7 +9,6 @@
     "test": "jest",
     "local": "sls offline",
     "package": "sls package",
-    "build": "./bin/build.sh",
     "create-package": "ts-node ./bin/create-package.ts"
   },
   "author": "Nima Eskandary <nimaesk1@gmail.com>",
