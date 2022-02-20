@@ -26,5 +26,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run -ws build
+    - run: npm run --workspaces build
     - run: npm run test
