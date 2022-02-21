@@ -4,7 +4,7 @@ const slsw = require('serverless-webpack');
 
 module.exports = {
   "mode": "development",
-  "target": "node12",
+  "target": "node14",
   "entry": slsw.lib.entries,
   "devtool": 'inline-source-map',
   "watch": false,
@@ -17,7 +17,7 @@ module.exports = {
                   "loader": "ts-loader",
                   "options": {
                       "transpileOnly": false,
-                      "projectReferences": true, // because we use typescript project references in our tsconfigs
+                      "projectReferences": true,
                       "configFile": path.resolve(__dirname, "packages/handlers/src/tsconfig.json")
                   }
               }
@@ -27,7 +27,7 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
     plugins: [
-      new TsconfigPathsPlugin({ // becuase we use typescript path mapping we need to convert them to something javascript understands
+      new TsconfigPathsPlugin({
         "configFile": path.resolve(__dirname, "packages/handlers/src/tsconfig.json")
       })
     ]

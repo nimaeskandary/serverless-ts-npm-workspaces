@@ -12,7 +12,6 @@ Some configration is used to make use of npm workspaces, typescript composite pr
     * [src](#src)
     * [tests](#tests)
 * [Jest](#jest)
-* [Webpack](#webpack)
 
 ## Creation
 
@@ -80,10 +79,12 @@ run `npm run create-package <package-name>` to setup a new package
     ...,
     "compilerOptions": {
         "paths": {
-            ... other interal dependencies,
+            ...other interal dependencies,
             "@serverless-ts-npm-workspaces/<package-name>/*": ["packages/<package-name>/src/*"]
         }
 ```
+
+> Note > do not use typescript paths for imports from the same package, as it will break imports for consumers of published packages, i.e. `import foo from '../foo'` is okay if it is from the same package
 
 ### src
 
@@ -129,9 +130,3 @@ module.exports = {
         '^@serverless-ts-npm-workspaces/<package-name>/(.*)$': '<rootDir>/packages/<package-name>/src/$1'
     }
 ```
-
-## Webpack
-
-* currently `webpack.config.js` is used when running serverless to build the handlers and bundle dependencies
-    * this sorts out the dependency mess of using npm workspaces, typescript references, typescript path mapping
-* **TODO** similar webpack configurations can be created to build packages that need to published to an npm registry

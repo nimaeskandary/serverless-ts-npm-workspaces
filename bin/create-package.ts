@@ -16,6 +16,9 @@ const createPackageJson = async (packageName: string) => {
     "name": "@serverless-ts-npm-workspaces/${packageName}",
     "version": "1.0.0",
     "description": "${packageName}",
+    "sideEffects": false,
+    "private": false,
+    "main": "build/index.js",
     "scripts": {
         "build": "tsc --build src/"
     },
@@ -25,7 +28,11 @@ const createPackageJson = async (packageName: string) => {
         "type": "git",
         "url": "git+https://github.com/nimaeskandary/serverless-ts-npm-workspaces.git"
     },
-    "author": "",
+    "author": "Nima Eskandary <nimaesk1@gmail.com>",
+    "files": [
+        "build/",
+        "package.json"
+    ],
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/nimaeskandary/serverless-ts-npm-workspaces/issues"
