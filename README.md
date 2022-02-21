@@ -57,8 +57,8 @@ run `npm run create-package <package-name>` to create and configure a new packag
 ## Publish
 
 * `npm login`
-* publish all `npm publish -ws --access public`
-* publish individual `npm publish -w=packages/<package-name> --access public`
+* publish all: `npm publish -ws --access public`
+* publish individual: `npm publish -w=packages/<package-name> --access public`
 
 [packages](https://www.npmjs.com/settings/serverless-ts-npm-workspaces/packages) are published under the scope `@serverless-ts-npm-workspaces`
 
