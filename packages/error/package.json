@@ -2,6 +2,9 @@
   "name": "@serverless-ts-npm-workspaces/error",
   "version": "1.0.0",
   "description": "error",
+  "sideEffects": false,
+  "private": false,
+  "main": "build/index.js",
   "scripts": {
     "build": "tsc --build src/"
   },
@@ -11,7 +14,11 @@
     "type": "git",
     "url": "git+https://github.com/nimaeskandary/serverless-ts-npm-workspaces.git"
   },
-  "author": "",
+  "author": "Nima Eskandary <nimaesk1@gmail.com>",
+  "files": [
+    "build/",
+    "package.json"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nimaeskandary/serverless-ts-npm-workspaces/issues"

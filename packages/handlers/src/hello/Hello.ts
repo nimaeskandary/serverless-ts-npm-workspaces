@@ -1,5 +1,5 @@
-import { Logger } from '@serverless-ts-npm-workspaces/logger/Logger'
-import { BaseHandlerContext, BaseHandlerEvent, BaseHandlerResult } from '@serverless-ts-npm-workspaces/handler-converters/BaseHandler'
+import { Logger } from '@serverless-ts-npm-workspaces/logger'
+import { BaseHandlerContext, BaseHandlerEvent, BaseHandlerResult } from '@serverless-ts-npm-workspaces/handler-converters'
 
 const logger = new Logger('hello')
 

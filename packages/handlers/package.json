@@ -2,6 +2,9 @@
   "name": "@serverless-ts-npm-workspaces/handlers",
   "version": "1.0.0",
   "description": "handlers",
+  "sideEffects": false,
+  "private": false,
+  "main": "build/index.js",
   "scripts": {
     "build": "tsc --build src/"
   },
@@ -15,7 +18,11 @@
     "type": "git",
     "url": "git+https://github.com/nimaeskandary/serverless-ts-npm-workspaces.git"
   },
-  "author": "",
+  "files": [
+    "build/",
+    "package.json"
+  ],
+  "author": "Nima Eskandary <nimaesk1@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nimaeskandary/serverless-ts-npm-workspaces/issues"

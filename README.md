@@ -12,6 +12,7 @@ Work in progress serverless typescript project
 * [Tests](#tests)
     * [Unit](#unit)
 * [Build](#build)
+* [Publish](#publish)
 * [Serverless](#serverless)
 
 ## Dependencies
@@ -33,9 +34,9 @@ Work in progress serverless typescript project
 ### Typescript
 
 * [composite](https://www.typescriptlang.org/tsconfig#composite) project
-    * packages are independently compiled, which greatly speeds up build time
+    * packages are incrementally compiled which greatly speeds up build time
 * [path mappings](https://www.typescriptlang.org/tsconfig#paths) are defined in `tsconfig-base.json`
-    * avoids imports that rely on relative paths, e.g. `import { foo } from '../../foo'` vs `import { foo } from '@serverless-ts-npm-workspaces/foo'`
+    * avoids imports that rely on relative paths, e.g. `import { foo } from '../../foo/src'` vs `import { foo } from '@serverless-ts-npm-workspaces/foo'`
 
 ### Adding a new package
 
@@ -50,7 +51,16 @@ run `npm run create-package <package-name>` to create and configure a new packag
 
 ## Build
 
-`npm run -ws build`
+* build all: `npm run -ws build`
+* build individual: `npm run -w=packags/<package-name> build`
+
+## Publish
+
+* `npm login`
+* publish all `npm publish -ws --access public`
+* publish individual `npm publish -w=packages/<package-name> --access public`
+
+[packages](https://www.npmjs.com/settings/serverless-ts-npm-workspaces/packages) are published under the scope `@serverless-ts-npm-workspaces`
 
 ## Serverless
 

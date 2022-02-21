@@ -1,4 +1,4 @@
-import { helloHandler } from '@serverless-ts-npm-workspaces/handlers/hello/Hello'
+import { helloHandler } from '@serverless-ts-npm-workspaces/handlers'
 
 describe('hello', () => {
     it('returns 200', async () => {
