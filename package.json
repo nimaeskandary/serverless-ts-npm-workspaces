@@ -15,7 +15,6 @@
   "author": "Nima Eskandary <nimaesk1@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "node-forge": ">=1.0.0"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
