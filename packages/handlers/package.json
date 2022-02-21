@@ -11,8 +11,8 @@
   "dependencies": {},
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92",
-    "@serverless-ts-npm-workspaces/logger": "file:../logger",
-    "@serverless-ts-npm-workspaces/handler-converters": "file:../handler-converters"
+    "@serverless-ts-npm-workspaces/logger": "@serverless-ts-npm-workspaces/logger",
+    "@serverless-ts-npm-workspaces/handler-converters": "@serverless-ts-npm-workspaces/handler-converters"
   },
   "repository": {
     "type": "git",
