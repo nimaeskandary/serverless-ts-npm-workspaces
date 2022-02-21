@@ -44,7 +44,7 @@ run `npm run create-package <package-name>` to setup a new package
 {
     ...
     "workspaces": [
-        ... other workspaces
+        ...other workspaces
         "packages/<package-name>"
     ]
 }
@@ -61,9 +61,12 @@ run `npm run create-package <package-name>` to setup a new package
     "build": "tsc --build src/"
   },
   "dependencies": {
-      "@serverless-ts-npm-workspaces/logger": "file:../logger" // TODO, typescript doesnt need this to compile since we use project references, and serverless-webpack doesn't need this since it bundles dependencies. TBD if internal dependencies need to be listed here at all once individual package publishing is sorted out
-      ... other internal dependencies
+      "@serverless-ts-npm-workspaces/logger": "file:../logger"
+      ...other dependencies
   },
+  "devDependencies": {
+      // Leave empty unless necessary, dev depenedencies can simply live in the root package.json and not repeated by each workspace. Only prodocution dependencies are required for consumers of published packages
+  }
   ...
 }
 ```
@@ -79,12 +82,12 @@ run `npm run create-package <package-name>` to setup a new package
     ...,
     "compilerOptions": {
         "paths": {
-            ...other interal dependencies,
+            ...other dependencies,
             "@serverless-ts-npm-workspaces/<package-name>/*": ["packages/<package-name>/src/*"]
         }
 ```
 
-> Note > do not use typescript paths for imports from the same package, as it will break imports for consumers of published packages, i.e. `import foo from '../foo'` is okay if it is from the same package
+> Note: do not use typescript paths for imports from the same package, as it will break imports for consumers of published packages, i.e. `import foo from '../foo'` if it is from the same package
 
 ### src
 
@@ -114,7 +117,7 @@ run `npm run create-package <package-name>` to setup a new package
     "extends": "../../../tsconfig-base.json",
     "references": [
         {
-            "path": "../src" // this should handle other references for tests
+            "path": "../src" // this will all handle other references for tests
         }
     ]
 }

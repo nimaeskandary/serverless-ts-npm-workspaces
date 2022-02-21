@@ -1,6 +1,6 @@
 # serverless-ts-npm-workspaces
 
-Work in progress serverless typescript project
+Work in progress that utilizes serverless, typescript composite builds, and npm workspaces
 
 ## Table of Contents
 
