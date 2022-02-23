@@ -1,6 +1,6 @@
 {
   "name": "@serverless-ts-npm-workspaces/root",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "serverless-ts-npm-workspaces",
   "engines": {
     "node": "^14.x"
