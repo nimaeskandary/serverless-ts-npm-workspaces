@@ -1,6 +1,6 @@
 {
   "name": "@serverless-ts-npm-workspaces/error",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "error",
   "sideEffects": false,
   "private": false,

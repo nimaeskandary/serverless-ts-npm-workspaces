@@ -1,6 +1,6 @@
 {
   "name": "@serverless-ts-npm-workspaces/handlers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "handlers",
   "sideEffects": false,
   "private": false,
@@ -11,8 +11,8 @@
   "dependencies": {},
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92",
-    "@serverless-ts-npm-workspaces/logger": "@serverless-ts-npm-workspaces/logger",
-    "@serverless-ts-npm-workspaces/handler-converters": "@serverless-ts-npm-workspaces/handler-converters"
+    "@serverless-ts-npm-workspaces/logger": "^1.0.0",
+    "@serverless-ts-npm-workspaces/handler-converters": "^1.0.0"
   },
   "repository": {
     "type": "git",

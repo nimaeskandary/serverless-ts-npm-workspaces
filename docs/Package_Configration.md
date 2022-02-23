@@ -82,7 +82,7 @@ run `npm run create-package <package-name>` to setup a new package
     "build": "tsc --build src/"
   },
   "dependencies": {
-      "@serverless-ts-npm-workspaces/logger": ">=1.0.0"
+      "@serverless-ts-npm-workspaces/logger": "^1.0.0"
       ...other dependencies and internal packages
   },
   "devDependencies": {

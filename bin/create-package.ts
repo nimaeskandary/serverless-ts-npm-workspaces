@@ -1,4 +1,4 @@
-#!/user/bin/env ts-node
+#!/usr/bin/env ts-node
 
 import { promisify } from 'util'
 import { exec } from 'child_process'

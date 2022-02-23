@@ -45,8 +45,7 @@ See [Package Configuration](./docs/Package_Configration.md)
 ## Publish
 
 * `npm login`
-* publish all: `npm publish -ws --access public`
-* publish individual: `npm publish -w=packages/<package-name> --access public`
+* `./bin/publish.sh`
 
 [packages](https://www.npmjs.com/org/serverless-ts-npm-workspaces) are published under the scope `@serverless-ts-npm-workspaces`
 
