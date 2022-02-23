@@ -4,6 +4,9 @@ Some configration is used to make use of npm workspaces, typescript composite pr
 
 ## Table of Contents
 
+* [Features](#features)
+    * [Workspaces](#workspaces)
+    * [Typescript](#typescript)
 * [Creation](#creation)
 * [File Structure](#file-structure)
 * [Package.json](#packagejson)
@@ -12,6 +15,24 @@ Some configration is used to make use of npm workspaces, typescript composite pr
     * [src](#src)
     * [tests](#tests)
 * [Jest](#jest)
+
+## Features
+
+### Workspaces
+
+* `packages/` contains [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) 
+    * related projects can share the same development environmet 
+    * managed by a top level `package.json`
+    * flexibility to publish packages to an npm registry
+    * common dependenices are hoisted into the `node_modules/` in the project root instead of downloaded multiple times
+
+### Typescript
+
+* [composite](https://www.typescriptlang.org/tsconfig#composite) project
+    * packages are incrementally compiled
+* [path mappings](https://www.typescriptlang.org/tsconfig#paths) are defined in `tsconfig-base.json`
+    * avoids imports from other packages that rely on relative paths, e.g. `import { foo } from '../../foo/src'` vs `import { foo } from '@serverless-ts-npm-workspaces/foo'`
+        * **Note** still use relative paths when importing from the same package or it would cause issues for consumers of a published npm package
 
 ## Creation
 
@@ -61,8 +82,8 @@ run `npm run create-package <package-name>` to setup a new package
     "build": "tsc --build src/"
   },
   "dependencies": {
-      "@serverless-ts-npm-workspaces/logger": "@serverless-ts-npm-workspaces/logger" // for internal dependencies list in this format
-      ...other dependencies
+      "@serverless-ts-npm-workspaces/logger": ">=1.0.0"
+      ...other dependencies and internal packages
   },
   "devDependencies": {
       // Leave empty unless necessary, dev depenedencies can simply live in the root package.json and not repeated by each workspace. Only prodocution dependencies are required for consumers of published packages
@@ -82,12 +103,10 @@ run `npm run create-package <package-name>` to setup a new package
     ...,
     "compilerOptions": {
         "paths": {
-            ...other dependencies,
-            "@serverless-ts-npm-workspaces/<package-name>/*": ["packages/<package-name>/src/*"]
+            "@serverless-ts-npm-workspaces/<package-name>/*": ["packages/<package-name>/src/*"],
+            ...other internal packages
         }
 ```
-
-> Note: do not use typescript paths for imports from the same package, as it will break imports for consumers of published packages, i.e. `import foo from '../foo'` if it is from the same package
 
 ### src
 
@@ -103,7 +122,7 @@ run `npm run create-package <package-name>` to setup a new package
         {
             "path": "../../logger/src",
         }
-        ...other internal dependencies
+        ...other internal packages this package depends on
     ]
 }
 ```
@@ -129,7 +148,7 @@ run `npm run create-package <package-name>` to setup a new package
 module.exports = {
     ...,
     moduleNameMapper: {
-        other internal dependencies,
-        '^@serverless-ts-npm-workspaces/<package-name>/(.*)$': '<rootDir>/packages/<package-name>/src/$1'
+        '^@serverless-ts-npm-workspaces/<package-name>/(.*)$': '<rootDir>/packages/<package-name>/src/$1',
+        ...other internal packages
     }
 ```

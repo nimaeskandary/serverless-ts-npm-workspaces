@@ -6,9 +6,8 @@ Work in progress that utilizes serverless, typescript composite builds, and npm 
 
 * [Dependencies](#dependencies)
 * [Packages](#packages)
-    * [Workspaces](#workspaces)
-    * [Typescript](#typescript)
-    * [Adding a new package](#adding-a-new-package)
+    * [Creation](#creation)
+    * [Configuration](#configuration)
 * [Tests](#tests)
     * [Unit](#unit)
 * [Build](#build)
@@ -23,24 +22,13 @@ Work in progress that utilizes serverless, typescript composite builds, and npm 
 
 ## Packages
 
-### Workspaces
+### Creation
 
-* `packages/` contains [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) 
-    * related projects can share the same development environmet 
-    * managed by a top level `package.json`
-    * flexibility to publish packages to an npm registry
-    * common dependenices are hoisted into the `node_modules/` in the project root instead of downloaded multiple times
+* to create a new package under `packages/`: `npm run create-package <package-name>`
 
-### Typescript
+### Configuration
 
-* [composite](https://www.typescriptlang.org/tsconfig#composite) project
-    * packages are incrementally compiled which greatly speeds up build time
-* [path mappings](https://www.typescriptlang.org/tsconfig#paths) are defined in `tsconfig-base.json`
-    * avoids imports that rely on relative paths, e.g. `import { foo } from '../../foo/src'` vs `import { foo } from '@serverless-ts-npm-workspaces/foo'`
-
-### Adding a new package
-
-run `npm run create-package <package-name>` to create and configure a new package, see [Package Configuration](./docs/Package_Configration.md) for details on configuration
+See [Package Configuration](./docs/Package_Configration.md)
 
 ## Tests
 
@@ -52,7 +40,7 @@ run `npm run create-package <package-name>` to create and configure a new packag
 ## Build
 
 * build all: `npm run -ws build`
-* build individual: `npm run -w=packags/<package-name> build`
+* build individual: `npm run -w=packages/<package-name> build`
 
 ## Publish
 

@@ -1,9 +1,11 @@
+// this is used by serverless to build deployment artifacts
+
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const slsw = require('serverless-webpack');
 
 module.exports = {
-  "mode": "development",
+  "mode": "production",
   "target": "node14",
   "entry": slsw.lib.entries,
   "devtool": 'inline-source-map',
