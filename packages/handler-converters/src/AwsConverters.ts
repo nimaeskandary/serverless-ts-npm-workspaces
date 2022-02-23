@@ -1,5 +1,5 @@
 import { APIGatewayProxyEventV2, APIGatewayProxyResultV2, Context } from 'aws-lambda'
-import { BaseHandlerEvent, BaseHandlerContext, BaseHandlerResult } from '@serverless-ts-npm-workspaces/handler-converters/BaseHandler'
+import { BaseHandlerEvent, BaseHandlerContext, BaseHandlerResult } from './BaseHandler'
 
 export const awsToBaseEvent = (event: APIGatewayProxyEventV2): BaseHandlerEvent => {
     return {
